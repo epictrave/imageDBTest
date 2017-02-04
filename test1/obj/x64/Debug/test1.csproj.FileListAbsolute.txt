@@ -1,0 +1,17 @@
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\bin\x64\Debug\test1.exe.config
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\bin\x64\Debug\test1.exe
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\bin\x64\Debug\test1.pdb
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\bin\x64\Debug\System.Data.SQLite.dll
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\bin\x64\Debug\System.Data.SQLite.pdb
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\obj\x64\Debug\test1.csprojResolveAssemblyReference.cache
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\obj\x64\Debug\test1.Form1.resources
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\obj\x64\Debug\test1.Properties.Resources.resources
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\obj\x64\Debug\test1.csproj.GenerateResource.Cache
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\obj\x64\Debug\test1.exe
+C:\Users\HUN\documents\visual studio 2013\Projects\test1\test1\obj\x64\Debug\test1.pdb
+C:\Users\HUN\Documents\Visual Studio 2013\Projects\test1\test1\bin\x64\Debug\test1.exe.manifest
+C:\Users\HUN\Documents\Visual Studio 2013\Projects\test1\test1\bin\x64\Debug\test1.application
+C:\Users\HUN\Documents\Visual Studio 2013\Projects\test1\test1\bin\x64\Debug\SQLite.Designer.dll
+C:\Users\HUN\Documents\Visual Studio 2013\Projects\test1\test1\bin\x64\Debug\SQLite.Designer.pdb
+C:\Users\HUN\Documents\Visual Studio 2013\Projects\test1\test1\obj\x64\Debug\test1.exe.manifest
+C:\Users\HUN\Documents\Visual Studio 2013\Projects\test1\test1\obj\x64\Debug\test1.application

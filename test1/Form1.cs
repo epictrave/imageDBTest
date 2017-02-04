@@ -65,6 +65,25 @@ namespace test1
             cn.Close();
             
         }
+        private void loaddata()
+        {
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            cmd.CommandText = "select id, name from pictures";
+            cn.Open();
+            dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    listBox1.Items.Add(dr[0].ToString());
+                    listBox2.Items.Add(dr[1].ToString());
+                }
+            }
+            dr.Close();
+            cn.Close();
+
+        }
         private void savepicture()
         {
             if (pictureBox1.Image != null)
@@ -86,13 +105,30 @@ namespace test1
             }
             
         }
-
+        private int count_table_column(string tablename){
+            cmd.CommandText = "pragma table_info("+tablename+")";  //해당 테이블 칼럼 이름 가져오는 query
+            cn.Open();
+            int count = 0;
+            dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    count++;
+                }
+            }
+            label3.Text = count.ToString();
+            dr.Close();
+            cn.Close();
+            return count;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {            
             cmd.Connection = cn;
             label1.Text = "";
             picture = new SQLiteParameter("@picture", SqlDbType.Image);
             loaddata();
+            count_table_column("pictures");
             
         }
         private void button1_Click(object sender, EventArgs e)
@@ -106,25 +142,7 @@ namespace test1
             loaddata();
         }
         
-        private void loaddata()
-        {
-            listBox1.Items.Clear();
-            listBox2.Items.Clear();
-            cmd.CommandText = "select id, name from pictures";            
-            cn.Open();
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
-            {
-                while (dr.Read())
-                {
-                    listBox1.Items.Add(dr[0].ToString());
-                    listBox2.Items.Add(dr[1].ToString());
-                }
-            }
-            dr.Close();
-            cn.Close();
-            
-        }
+        
         private void loadpicture()
         {
             
@@ -192,5 +210,22 @@ namespace test1
             }
             catch { }
         }
+        private void addcolumn(string tablename)
+        {
+            int count = count_table_column(tablename);
+            count++;
+            cmd.CommandText = "alter table "+tablename+" add column the" + count + "th char(1);";  //칼럼 추가
+            cn.Open();
+            dr = cmd.ExecuteReader();
+            dr.Close();
+            cn.Close();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            addcolumn("pictures");
+            count_table_column("pictures");
+
+        }
+
     }
 }

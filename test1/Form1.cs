@@ -33,7 +33,7 @@ namespace test1
             try
             {
                 OpenFileDialog f = new OpenFileDialog();
-                f.InitialDirectory = "C:/picture/";
+                f.InitialDirectory = deskPath;
                 f.Filter = "All Files|*.*|JPEG|*.jpg|Bitmaps|*.bmp|GIF|*.gif";
                 f.FilterIndex = 2;
                 if (f.ShowDialog() == DialogResult.OK)
